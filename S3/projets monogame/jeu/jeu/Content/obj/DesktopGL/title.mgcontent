@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>/home/shakaponche/Documents/projets monogame/jeu/jeu/Content/title.ogg</SourceFile>
+  <SourceTime>2016-02-06T20:13:37+01:00</SourceTime>
+  <DestFile>/home/shakaponche/Documents/projets monogame/jeu/jeu/Content/bin/DesktopGL/title.xnb</DestFile>
+  <DestTime>2016-09-21T10:42:48+02:00</DestTime>
+  <Importer>OggImporter</Importer>
+  <ImporterTime>2016-09-15T12:40:55+02:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2016-09-15T12:40:55+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>/home/shakaponche/Documents/projets monogame/jeu/jeu/Content/bin/DesktopGL/title.ogg</string>
+  </BuildOutput>
+</PipelineBuildEvent>

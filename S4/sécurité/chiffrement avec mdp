@@ -1,0 +1,21 @@
+000e160401 saxe
+
+saxe en ascii: 73 61 78 65
+
+0000 0000 0000 1110 0001 0110 0000 0100 0000 0001 (message codé en binaire)
+0111 0011 0110 0001 0111 1000 0110 0101 0111 0011 (saxe en binaire)
+
+NB: on rajoute le S de saxe pour arriver à la même longueur que le message
+
+0111 0011 0110 1111 0110 1110 0110 0001 0111 0010 (message décodé en hexa)
+
+message décodé en hexa: 73 6F 6e 61 72
+
+message décodé: sonar
+
+
+
+0 1 0 1
+0 0 1 0
+-------
+0 1 1 0

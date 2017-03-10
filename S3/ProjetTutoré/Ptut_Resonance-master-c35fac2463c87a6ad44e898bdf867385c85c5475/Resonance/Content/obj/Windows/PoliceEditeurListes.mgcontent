@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>H:/Projets Visual Studio/Resonance/Resonance/Content/PoliceEditeurListes.spritefont</SourceFile>
+  <SourceTime>2016-11-19T19:25:37.7402548+01:00</SourceTime>
+  <DestFile>H:/Projets Visual Studio/Resonance/Resonance/Content/bin/Windows/PoliceEditeurListes.xnb</DestFile>
+  <DestTime>2016-11-19T19:26:08.4170095+01:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2016-03-30T08:36:08+02:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2016-03-30T08:36:08+02:00</ProcessorTime>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

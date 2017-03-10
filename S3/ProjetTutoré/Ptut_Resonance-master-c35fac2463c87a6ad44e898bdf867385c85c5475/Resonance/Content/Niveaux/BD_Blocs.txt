@@ -1,0 +1,6 @@
+001=Vide
+002=Blanc
+003=Rouge_Fonce
+004=Orange
+005=Violet_Grise
+006=Herbe

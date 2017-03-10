@@ -1,0 +1,150 @@
+1)
+p=3 q=11
+n = 33
+
+2)
+(3-1)*(11-1) = 2*10 = 20 = fi(n)
+e appartient à [3 7 9 11 13 17 19]
+
+on choisit e = 7
+
+3)
+donc d = 3 suite à la résolution de l'équation suivante
+
+commande à rentrer dans xcas : solve((7*d)%20=1*((1/7)/20),d) 
+
+on chiffre avec la valeur 6:
+
+4)
+C=(m^e)%n
+ =6⁷%33
+ =279936%33
+ =30
+
+5)
+on décode:
+M=(C^d)%n
+ =30³%33
+ =27000%33=6
+
+6)
+8*8=64 bits
+La valeur est codé sur 64 bits
+
+7)
+Le message résultat du déchiffrement est mod(n)
+Le message ne peut donc pas avoir une valeur>n. Nécessite de découper le message et les chiffrer/déchiffrer indépendamment
+
+
+EXERCICE 6
+Question:
+1)Avec l'algoritme rSA, quels sont les paramètres (parmi p,q,n,e,etc) qui constituent la clé privé
+2)Même question pour la clé publique
+
+Réponses:
+1)
+Les paramètres fourni pour la clé privé sont (d,n)
+2)
+Les paramètre de la  clé publique sont (e,n)
+NB:a clé publique est potentiellement donnée à tout le monde)
+Si je connais la cé publique. ON connait (e,n). J'ai juste à déterminer d:
+(e%d)%fi(n)=1
+Je dois déterminer fi(n). Pour ça il me faut (p,q)
+
+Trouver p*q=n
+
+
+Integrité: on doit garantir qu'il n'y ait pas de modifications
+
+1-Hachage du message permet de fixer le condensat sur un nombre d'octet déterminé (qlqs octets, h(m))
+2-chiffre h(m) avec la clé symétrique c(m)
+3- c(m) est joint au message m (qui est transmis en clair)
+4-récepteur: calcul de h(m), on obtient h'(m)
+	si h(m) == h'(m) -> intégré
+	sinon corrompu 
+
+L'émetteur chiffre le hache de sa clé privée
+Le réceteur déchiffre et vérfie h(m) avec la clé publique
+
+
+
+Confidentialité:
+
+-Crytage des données avec un cryptage symétrique ou asymétrique
+-Si l'échange est bidirectionnelle, bécessité d'échanger
+
+EXERCICE 10
+
+Question:
+-Dans le cas où des clefs n'ont pas été distribués dans le cas du web par exemple)
+	-Trouver un algorithme combinant cryptage asymétrique et symétrique qui apallie aux inconvénients de ces deux méthodes
+	-Quel est l'inconvénient de cette méthode?
+
+
+
+Réponses:
+
+A-------->1go-------->B
+A veut transférer un message de 1go à B (relatif à la session)
+
+A-------------------->B->Clé privée pour le déchiffrement
+Chiffrement avec la clé publique de B d'une clé symétrique
+
+
+					
+1-B calcul (clé publique, clé privée) B envoie sa clé publique à A
+2-Chiffrement d'une clé symétrique avec la clé publique de B
+3-B déchiffre la clé de session avec sa clé privée
+4-Chiffrement symétrique des dnnées abev la clé de session
+
+
+
+
+
+SHH : authentification du serveur
+1ère fois; manuelle mais on récupère la clé publique du serveur
+
+Les autre fois:
+	-Le client envoie un challenge en clair
+	-Le serveur chiffre le challenge avec sa clé privée et le renvoi
+	-Le client déchiffre le challenge et vérfie  qu'il correspond bien à celui envoyé
+
+
+SSH : Authentification du client
+
+-Première possbilité: par mot de passe sécurisé puisque les clés sont déjà échangées donc possibilité de chiffrer/déchiffrer directement.
+
+-Echange d'une clé de session par un hiffrement asymétrique (clés échangées lors de l'authentifiation du serveur). C'est le client qui détermine la clé de session
+
+a)Login/mdp envoyés par le client (Chiffré par la clé de session)
+b)Si le client souhaite pas taper son login/mdp. Il peut déposer sa clé publique sur le serveur. C'est manuel: clé usb ou transmission du fichier contenant la clé publique via une session ssh/scp pour laquelle une authentification login/mdp a été effectué
+
+
+
+EXERCICE 12:
+
+Algorithme pour valider un certificat provennt d'un site web:
+	1-hacher le certificat (tous les champs sauf signature)
+	2-Déchiffrez la signature à partir de la clé publique de l'autorité de certification ( se trouvant sur un autre certificat
+	3-Comparer les résultats 1 et 2 -> si correspondance alors le certificat est valide sinon invalide
+
+Pour le premier: (signature^e)%n
+				= 15⁷%33=27 != 20 donc certficat invalide
+
+
+EXERCICE 13: résumé ssl
+	Décrire très précisément toutes les étpaes pour une communication basé sur un système de certificat et ssl.
+
+1-Récupération du certificat par le client
+2-Validation du certificat
+	-a) hachage
+	-b) déchiffrement signature avec la clé e l'autorité de certif
+	-c) Validation ou non
+3-On chiffre une clé de sesion symétrique)
+	il s'agit de la clé provennt des certificat de www.toto.fr
+4-Déchiffrement clé de session avec la clé privée de www.toto.fr
+5-Echange chiffrés avec la clé de session
+
+NB:si o
+
+

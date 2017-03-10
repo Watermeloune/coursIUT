@@ -1,0 +1,10 @@
+/home/shakaponche/Documents/projets monogame/ddqsdqs/ddqsdqs/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/shakaponche/Documents/projets monogame/ddqsdqs/ddqsdqs/obj/x86/Debug/ddqsdqs.Icon.ico
+/home/shakaponche/Documents/projets monogame/ddqsdqs/ddqsdqs/bin/Debug/OpenTK.dll.config
+/home/shakaponche/Documents/projets monogame/ddqsdqs/ddqsdqs/bin/Debug/ddqsdqs.exe.mdb
+/home/shakaponche/Documents/projets monogame/ddqsdqs/ddqsdqs/bin/Debug/ddqsdqs.exe
+/home/shakaponche/Documents/projets monogame/ddqsdqs/ddqsdqs/obj/x86/Debug/ddqsdqs.exe
+/home/shakaponche/Documents/projets monogame/ddqsdqs/ddqsdqs/obj/x86/Debug/ddqsdqs.exe.mdb
+/home/shakaponche/Documents/projets monogame/ddqsdqs/ddqsdqs/bin/Debug/MonoGame.Framework.dll
+/home/shakaponche/Documents/projets monogame/ddqsdqs/ddqsdqs/bin/Debug/OpenTK.dll
+/home/shakaponche/Documents/projets monogame/ddqsdqs/ddqsdqs/bin/Debug/NVorbis.dll

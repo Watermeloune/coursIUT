@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17E82FCA-30C1-47F9-A22E-2BB8F531475A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Resonance</RootNamespace>
+    <AssemblyName>Resonance</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Content\Jeu\Jeu.cs" />
+    <Compile Include="Core\BoutonEcran.cs" />
+    <Compile Include="Core\EcranDémarrage.cs" />
+    <Compile Include="Core\GameObject.cs" />
+    <Compile Include="Core\Heros.cs" />
+    <Compile Include="Core\Pointeur.cs" />
+    <Compile Include="Core\TextArea.cs" />
+    <Compile Include="Core\TextField.cs" />
+    <Compile Include="Niveaux\Ajouter_PNJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Niveaux\Ajouter_PNJ.Designer.cs">
+      <DependentUpon>Ajouter_PNJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Niveaux\Ajouter_Objet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Niveaux\Ajouter_Objet.Designer.cs">
+      <DependentUpon>Ajouter_Objet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Niveaux\Ajouter_Ennemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Niveaux\Ajouter_Ennemi.Designer.cs">
+      <DependentUpon>Ajouter_Ennemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Niveaux\Ajouter_Mur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Niveaux\Ajouter_Mur.Designer.cs">
+      <DependentUpon>Ajouter_Mur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Niveaux\Editer_PNJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Niveaux\Editer_PNJ.Designer.cs">
+      <DependentUpon>Editer_PNJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Niveaux\Editer_Ennemi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Niveaux\Editer_Ennemi.Designer.cs">
+      <DependentUpon>Editer_Ennemi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Niveaux\Editer_Evenement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Niveaux\Editer_Evenement.Designer.cs">
+      <DependentUpon>Editer_Evenement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Niveaux\Arme.cs" />
+    <Compile Include="Niveaux\Bloc.cs" />
+    <Compile Include="Niveaux\Bouton.cs" />
+    <Compile Include="Niveaux\Bouton_Liste.cs" />
+    <Compile Include="Niveaux\Case.cs" />
+    <Compile Include="Niveaux\ChangerNom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Niveaux\ChangerNom.Designer.cs">
+      <DependentUpon>ChangerNom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Niveaux\Editeur.cs" />
+    <Compile Include="Niveaux\EvenementObjet.cs" />
+    <Compile Include="Niveaux\EvenementAssassinat.cs" />
+    <Compile Include="Niveaux\EvenementPorte.cs" />
+    <Compile Include="Niveaux\EvenementDialogue.cs" />
+    <Compile Include="Niveaux\Ajouter_Bloc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Niveaux\Ajouter_Bloc.Designer.cs">
+      <DependentUpon>Ajouter_Bloc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Niveaux\Liste.cs" />
+    <Compile Include="Niveaux\ListePNJ.cs" />
+    <Compile Include="Niveaux\ListeEnnemis.cs" />
+    <Compile Include="Niveaux\ListeEvènement.cs" />
+    <Compile Include="Niveaux\Menu_Latéral.cs" />
+    <Compile Include="Niveaux\Menu_Supérieur.cs" />
+    <Compile Include="Niveaux\Mur.cs" />
+    <Compile Include="Niveaux\PNJ_Neutres.cs" />
+    <Compile Include="Niveaux\Ennemis.cs" />
+    <Compile Include="Niveaux\Evenement.cs" />
+    <Compile Include="Niveaux\Niveau.cs" />
+    <Compile Include="Niveaux\Objet.cs" />
+    <Compile Include="Niveaux\PNJ.cs" />
+    <Compile Include="Resonance.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Blocs\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Bouton_renommer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\icone_ennemi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\icone_event.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\icone_event_onclic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\icone_PNJ.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Indicateur_position.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Murs\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Objets\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Ennemis\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\PNJ\*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bouton_liste_bloc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bouton_liste_ennemi.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bouton_liste_mur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bouton_liste_objet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\bouton_liste_PNJ.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Contour_sélection_bouton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Contour_sélection_case.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Editeur - Panneau latéral droit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Editeur - Panneau supérieur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\got.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\menu.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\niveauTest.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Niveaux\BD_Blocs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Niveaux\BD_Ennemis.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Niveaux\BD_Murs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Niveaux\BD_Objets.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Niveaux\BD_PNJs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\sauvegarder_normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\sauvegarder_validation.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\souris.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\perso_test.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\texturetype_ennemis.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\texturetype_PNJ.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\texturetype_évènements.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\texture_pattern.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\texture_quadrillage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Police1.spritefont" />
+    <None Include="Content\PoliceEditeurListes.spritefont" />
+    <None Include="Content\PoliceEditeur.spritefont" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Windows\x86\Debug\Content\Blocs\" />
+    <Folder Include="Content\Murs\" />
+    <Folder Include="Content\Objets\" />
+    <Folder Include="Content\PNJ\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Niveaux\Ajouter_PNJ.resx">
+      <DependentUpon>Ajouter_PNJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Niveaux\Ajouter_Objet.resx">
+      <DependentUpon>Ajouter_Objet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Niveaux\Ajouter_Ennemi.resx">
+      <DependentUpon>Ajouter_Ennemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Niveaux\Ajouter_Mur.resx">
+      <DependentUpon>Ajouter_Mur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Niveaux\Ajouter_Bloc.resx">
+      <DependentUpon>Ajouter_Bloc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Niveaux\ChangerNom.resx">
+      <DependentUpon>ChangerNom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Niveaux\Editer_Ennemi.resx">
+      <DependentUpon>Editer_Ennemi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Niveaux\Editer_Evenement.resx">
+      <DependentUpon>Editer_Evenement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Niveaux\Editer_PNJ.resx">
+      <DependentUpon>Editer_PNJ.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,18 @@
+deux modes:
+
+infrastruvture:
+	-CHaque station oit être rattaché à un point d'accès
+	-Toute			 connection transite pas le point daccès
+
+
+
+deux méthodes d'accès
+
+DCF (Distributed Coordination Function chaque station décide tout seul quand elle pourra transmettre sans coordination entre les noeuds
+un seul point d'accès à la fois (pas d'intéférence)
+ex: tout le monde peut parler mais pas en même temps
+	si une transmission est en cours on attend qu'elle soit terminée
+
+
+
+PCF (Point Coordination Function) un point gère les transmissionsx	c

@@ -1,0 +1,151 @@
+Problèmes liées aux sources de données
+
+-Sources multiples et disparates
+-sources présentes sur différentes infrastructures (OS)
+-application historiques, technologie obsolètes
+-Historique de changement non-préservé dans les sources
+-Qualité de données douteuse et changeante dans le temps
+-Evolution des systèmes sources, changement non stable dans le temps
+-incohérence entre les différentes sources (besin de MDM)
+-DOnnées dans un format difficilement interprétable ou ambigu (code dans les systèmes sources
+
+
+Le SAS-> au moins 2 bases de données.
+		-Ce qu'il reçoit
+		-info transformé pour être utilisé dans le datawarehouse
+
+SAS->DataWareHouse->DataMart
+
+Datamart : sous élément fonctionnel relatif à un élément
+
+
+ETL -> permet à l'aide de trois opérations de consolider les dnnées
+-Extraction
+	-De découvrir, analyser et extraire des données dans des sources hétérogènes
+
+-Transformation
+	-Application e transformation simples ou complexe aux données pour effectuer les tâches de nettoyage, de consolidation, d'agrégation
+	-De nettoyer et standardiser les données selon les rgles de gestion de l'entreprise, notamment les données référentiels (MDM)
+
+-Chargement
+	-Intégrations de donnéees dans le datawarehouse, gestion des changements relatif aux dimensions à varation lentes
+
+
+ETL est un système qui permet de charger les données dans un datamart ou un datawarehouse, d'offrir un environnement de développement, des outils de gesstion et de maintenant.
+Il fonctionne sous fome de batch pour un traitement massif des données
+
+C'est un architecture intergicielle orienté données
+Il est apparu pour répondre au besoin de chargement régulier de données agrégées dans le datawarehoouse
+
+Evolution des ETL suit celle des systèmes d'informations qui se sont compplexifiés (en technologie et en nombre)
+
+-Cette complexité a aussi amené à la création d'outil de egestion centralisé de référéntiel (Master Data....
+
+
+DIfférentes types d'ETL ---> ETL ou ELT
+
+-ETL (Extract Transform Load)
+	-On ne génère pas de SQL
+
+-ELT (Extract Load Transform)
+	-Données stockées dans des tables tampons (SQL généré)
+
+
+Approche ETL
+	-Traditionnel pour alimenter un entrepot de données
+	-Dspose en général d'un moteur (engine) et installé sur des serveurs distincts
+	-Tous es traitements de transformation se font par le biais du moteur ETL
+	-Il traite ligne par ligne pour faire des traitements
+	-Approche a plus répandu actuellement
+	-Exploité ddans des environnements très hétérogènes
+	-Pour les transformations, c'est un moteur engine autre que ceux des SGBD qui est utilisé (exemple le moteur de JAVA ou PERL pour Talend)
+
+	-Exemple: Informatica, cognos decisionStream
+
+
+
+Il y a en fait 3 catégorie d'ETL
+
+-Engine based:
+	-Les transformations sont exécuées sur un serveur ETL, disposant en général d'un référentiel. Ce genre d'outils dispose généralement d'un moteur de transformation
+	ex:Informatica
+
+-Database-Embedded:
+	-Les transformation sont intégrées dans la BD
+	ex: SSIS en partie
+
+-Code-Generators:
+	-Les transformations sont conçues et un code est généré. Ce code est déployable indépendemment de la base de donnée
+	ex:Oracle Data Integrator
+
+
+4-Fonctions ETL
+
+-Comme pour la modélisation OLAP, les fonctions d'un ETL ont été décrites par Ralph Kimball (2004)
+
+-Elles sont au nombre de 38 et sont aussi appelées sous-ssystème, classé par type:
+
+EXTRACTION:
+	-Système d'extraction
+	-Système e détection des changements
+
+CHARGEMENT:
+	-Système de chargement périodique des tables de fait au niveau de détail le plus fin
+
+TRANSFORMATION:
+	-Système de validation de la conformité de données
+	-Système de gestion de la qualité de données
+
+OPERATION (MANIPULATION, MAINTENANCE)
+	-Ordonnanceur des processus ETL
+	-Système de gestion des erreurs
+
+
+
+LES ETAPES DU PROCESSUS ETL
+
+	ZONE DE COLLECTE (LANDING ZONE)
+		-Chargement initial
+		-Chargement incrémentatiel
+
+	ZONNE DE CHARGEMENT (STAGING ZONE, SAS,...)
+		-Gestion des clés
+			-Cle de métier de production (Business key)
+			-Cle de substitution (Surrogate key)
+
+	BD de destination, datawarehouse et gestion d'erreur
+		-MAJ des dimensions/faits
+
+
+STAGING ZONE/AREA
+	-Un ensemble de base de données permettant de stocker les différentes sources, commencer à les homogéniser et en vérifant la qualité
+	-Staging Area est purgé à chaque exécution de ETL
+	-C'est une zone d'attente, une "salle d'embarquement"
+	-En aucun cas on ne croisera les sources dans cet élément
+	-L'étape qui permet d'être "full...
+
+
+ODS (Operational Data Store)
+	-l'étape juste avant l'alimentation du datawarehouse
+	-Utilise comme source la Staging Area
+	-Permet souvent de purger les informations redondantes
+	-COntient généralement des données de niveau fin, unitaire par opposition aux données (pré)agrégées stockées dans le datawarehouse.
+
+
+
+FLUX DE DONNÉE (THÉORIQUES)
+	Quel est l'ordonnancement de l'alimentation?
+		-FAITS puis DIMENSION
+		-DIMENSION puis FAITS --> Bon
+
+		-Au sein des HIERARCHIES issues des dimensions?
+
+
+ALIMENTATON DE DIMENSOINS A VARIATION LENTES (SCD)
+Il existe 4 types d'évolution des données de dimensions
+
+
+
+
+
+

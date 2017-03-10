@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLDeployment</id>
+    <coordinates>
+      <x>220</x>
+      <y>215</y>
+      <w>100</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>*Vente*
+--
+id_forfait : int
+id_promotion : int
+canalVente : int
+idClient : int
+Montant : int
+--
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>230</x>
+      <y>90</y>
+      <w>85</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>*Date*
+ 
+--
+dateDebut : date
+dateFin : date
+--
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>35</x>
+      <y>205</y>
+      <w>85</w>
+      <h>75</h>
+    </coordinates>
+    <panel_attributes>*Client*
+ 
+--
+idClient : int
+grpAge : String
+sexe : String
+adresse : Stringt
+typeClient : String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>105</x>
+      <y>230</y>
+      <w>124</w>
+      <h>29</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>15;15;115;20</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>255</x>
+      <y>125</y>
+      <w>24</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>15;15;15;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>415</x>
+      <y>275</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>*Forfait*
+ 
+--
+dateDebut : date
+dateFin : date
+--
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>280</x>
+      <y>375</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>*Destination*
+ 
+--
+Ville : String
+Pays : String
+Hotel : String
+--
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>440</x>
+      <y>160</y>
+      <w>80</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>*Destination*
+ 
+--
+Ville : String
+Pays : String
+Hotel : String
+--
+  </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

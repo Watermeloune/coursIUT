@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>/home/shakaponche/Documents/projets monogame/jeu/jeu/Content/background.png</File>
+    <File>/home/shakaponche/Documents/projets monogame/jeu/jeu/Content/hit.wav</File>
+    <File>/home/shakaponche/Documents/projets monogame/jeu/jeu/Content/logo.png</File>
+    <File>/home/shakaponche/Documents/projets monogame/jeu/jeu/Content/monkey.png</File>
+    <File>/home/shakaponche/Documents/projets monogame/jeu/jeu/Content/title.ogg</File>
+  </SourceFiles>
+</SourceFileCollection>
